@@ -12,8 +12,23 @@ Don't forget the space after the closing parentheses!
 
 //my solution
 
+function createPhoneNumber(numbers){
+    if (!numbers.length) return false
+    return `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`
+  }
 
 //best practice solution
+
+function createPhoneNumber(numbers){
+    var format = "(xxx) xxx-xxxx";
+    
+    for(var i = 0; i < numbers.length; i++)
+    {
+      format = format.replace('x', numbers[i]);
+    }
+    
+    return format;
+  }
 
 
 //alternative solution
