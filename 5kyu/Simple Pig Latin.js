@@ -34,13 +34,13 @@ function pigIt(str){
 //best practice solution
 
 function pigIt(str){
-    return str.replace(/(\w)(\w*)(\s|$)/g, "\$2\$1ay\$3")
+    return str.replace(/(\w)(\w*)(\s|$)/g, "\$2\$1ay\$3")       //this method is actually kind of confusing. I understand that it's by grouping, but the syntax is really throwing me off
   }
 
 //alternative solution
 
 function pigIt(str) {
-    return str.replace(/\w+/g, (w) => {
+    return str.replace(/\w+/g, (w) => {         
       return w.slice(1) + w[0] + 'ay';
     });
   }
