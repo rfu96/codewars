@@ -31,7 +31,7 @@ function solution(string) {
 
 
 function solution(string) {
-    return(string.replace(/([A-Z])/g, ' $1'));
+    return(string.replace(/([A-Z])/g, ' $1'));      //replaces the capital letter with the capital letter + a space before. $1 refers to the first sorting group
   
   }
 
@@ -40,7 +40,7 @@ function solution(string) {
 function solution(string) {
     string = string.split('').map(function (el) {
       if (el === el.toUpperCase()) {
-        el = ' ' + el
+        el = ' ' + el                             //same method as above without using regex
       }
       return el
     })

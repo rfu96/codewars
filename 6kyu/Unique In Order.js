@@ -47,5 +47,5 @@ function uniqueInOrder(it) {
 //alternative solution
 
 var uniqueInOrder=function(iterable){
-    return [...iterable].filter((a, i) => a !== iterable[i-1])
+    return [...iterable].filter((a, i) => a !== iterable[i-1])    //could've just done iterable.filter instead of [...iterable].filter
 }

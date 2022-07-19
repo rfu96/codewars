@@ -39,12 +39,12 @@ const findOdd = (xs) => xs.reduce((a, b) => a ^ b);                 //what in ta
 
 function findOdd(A) {
     var obj = {};
-    A.forEach(function(el){
-      obj[el] ? obj[el]++ : obj[el] = 1;
-    });
+    A.forEach(function(el){                                           
+      obj[el] ? obj[el]++ : obj[el] = 1;          //create an object. Each item in the array becomes a property in the object. Add 1 to the value of the property if it repeats
+    });                                           //otherwise create the property and assign it a value of 1
     
     for(prop in obj) {
-      if(obj[prop] % 2 !== 0) return Number(prop);
+      if(obj[prop] % 2 !== 0) return Number(prop); 
     }
   }
 
@@ -52,5 +52,14 @@ function findOdd(A) {
 //another alternative I really like
 
   function findOdd(arr) {
-    return arr.find((item, index) => arr.filter(el => el == item).length % 2)
+    return arr.find((item, index) => arr.filter(el => el == item).length % 2)     //self-explanatory
   }
+
+
+
+
+
+
+
+
+

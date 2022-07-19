@@ -44,3 +44,10 @@ function solution(number){
 function solution(number){
     return number < 1 ? 0 : [...new Array(number).keys()].filter(n => n % 3 == 0 || n % 5 == 0).reduce((a, b) => a + b);
   }
+
+  //if the number is negative then return 0. Otherwise construct a new array with the numbers, then filter to retrieve the appropriate numbers and reduce
+//what is the point of [...new Array(number).keys()]? Why so complicated?
+
+//[Array(number).keys()] is equivalent of something like [arr.keys()], console logged will only return 'Array Iterator'
+//[...arr.keys()] seems to access all of the index values
+//recall that typically [...blah] would give you the actual value and not the index value

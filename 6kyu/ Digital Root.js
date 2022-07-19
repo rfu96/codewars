@@ -32,13 +32,13 @@ function digital_root(n) {
     if (n < 10) return n;
     
     return digital_root(
-      n.toString().split('').reduce(function(acc, d) { return acc + +d; }, 0));
+      n.toString().split('').reduce(function(acc, d) { return acc + +d; }, 0));   //recall +d attempts to turn whatever data type d is into a number
   }
 
 //alternative solution
 
 function digital_root(n){
-    n = eval(n.toString().split('').join('+'));
+    n = eval(n.toString().split('').join('+'));       //recall that eval( ) will try to evaluate the expression if it's fed a string
 
     if (n > 9) {
         return digital_root(n);

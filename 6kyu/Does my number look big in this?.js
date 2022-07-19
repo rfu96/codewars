@@ -38,7 +38,7 @@ function narcissistic(value) {
 //best practice solution
 
 function narcissistic( value ) {
-    return ('' + value).split('').reduce(function(p, c){
+    return ('' + value).split('').reduce(function(p, c){            //turn the value into a string then an array. Reduce the values by using the length as the exponent and each element of the array as the base.
       return p + Math.pow(c, ('' + value).length)
       }, 0) == value;
   }

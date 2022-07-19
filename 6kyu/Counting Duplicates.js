@@ -36,8 +36,8 @@ function duplicateCount(text){
 //best practice solution
 
 function duplicateCount(text){
-    return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
-  }
+    return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;          //regex selects for ANY character, as long as there's at least one of them (see \1+ ). Return the length of the array
+  }                                                                                               //array is basically something like ['aa', 'bb', 'cccc']
 
 //alternative solution
 

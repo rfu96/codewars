@@ -37,5 +37,5 @@ function spinWords(words){
 //alternative solution
 
 function spinWords(string){
-    return string.replace(/\w{5,}/g, function(w) { return w.split('').reverse().join('') })
+    return string.replace(/\w{5,}/g, function(w) { return w.split('').reverse().join('') }) //replace words with more than 5 characters with a reversed form
   }

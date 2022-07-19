@@ -31,11 +31,11 @@ function arrayDiff(a, b) {
 //best practice solution
 
 function array_diff(a, b) {
-    return a.filter(e => !b.includes(e));
+    return a.filter(e => !b.includes(e));    //creates another array that does not include the second array
   }
 
 //alternative solution
 
 function array_diff(a, b) {
-    return a.filter(function(x) { return b.indexOf(x) == -1; });
+    return a.filter(function(x) { return b.indexOf(x) == -1; });    //filters and returns an array with only the values that don't include b 
   }

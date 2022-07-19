@@ -24,7 +24,7 @@ function createPhoneNumber(numbers){
     
     for(var i = 0; i < numbers.length; i++)
     {
-      format = format.replace('x', numbers[i]);
+      format = format.replace('x', numbers[i]);         //self explanatory. Way better than my solution
     }
     
     return format;
