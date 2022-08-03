@@ -33,7 +33,7 @@ function primeFactors(n){
       keys.forEach(item => {
         if (countObject[item] == 0) delete countObject[item];
         if (countObject[item] > 1) countObject[item] = `(${item}**${countObject[item]})`;
-        if (countObject[item] == 1) countObject[item] = `(${item})`;
+        if (countObject[item] == 1) countObject[item] = `(${item})`; //if we don't specify == 1, all the deleted properties get assigned a value and are back on the menu
       });
     
     return Object.values(countObject).join('');
